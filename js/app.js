@@ -89,6 +89,9 @@
       picked = picked.concat(extra);
     }
     picked = shuffle(picked);
+    // Difficulty ramp: order easy → hard like the real CCAT. Shuffling first means
+    // categories stay interleaved within each difficulty band (sort is stable).
+    picked.sort((a, b) => (a.difficulty || 2) - (b.difficulty || 2));
 
     // Prepare per-question (optionally shuffle answer choices, remap correct index).
     state.questions = picked.map((q) => prepareQuestion(q));
@@ -109,6 +112,7 @@
       id: q.id,
       category: q.category,
       type: q.type,
+      difficulty: q.difficulty || 2,
       stem: q.stem,
       figuresHTML: q.figuresHTML || "",
       options: order.map((i) => q.options[i]),

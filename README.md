@@ -5,12 +5,13 @@ It runs entirely in the browser — no build step, no server, no dependencies.
 
 ## What it does
 
-- **10 practice tests** on the home screen. Each one draws a fresh, randomized set of questions from the bank, so no two attempts are identical.
+- **10 practice tests** on the home screen, drawing from a bank of **200+ questions**. Each test pulls a fresh, randomized set, so no two attempts are identical.
 - **Realistic format:** 50 questions in 15 minutes (configurable to 25 or 10 questions with a proportional time limit).
+- **Difficulty ramp:** like the real CCAT, each test is ordered easy → hard, so it gets tougher as you go (and is deliberately long for the time).
 - **Three question categories**, mirroring the real test:
-  - **Verbal Reasoning** — synonyms, antonyms, analogies, sentence completion, odd-one-out
-  - **Math & Logic** — word problems, percentages, ratios, number series, logical deduction
-  - **Spatial Reasoning** — next-in-sequence rotations, odd-one-out, rotated-match, and shape properties (rendered as crisp inline SVG)
+  - **Verbal Reasoning** — synonyms, antonyms, analogies, sentence completion, odd-one-out, **letter series**, and **attention-to-detail** error checking
+  - **Math & Logic** — word problems, percentages, ratios, averages, work-rate, number series, and logical deduction / syllogisms
+  - **Spatial Reasoning** — next-in-sequence rotations, odd-one-out, rotated-match, shape properties, and **3×3 matrix** pattern questions (the CCAT's signature spatial item) — all rendered as crisp inline SVG
 - **Live test experience:** countdown timer with auto-submit, a question map (palette), flag-for-review, progress bar, and keyboard shortcuts.
 - **Results & full answer review:** raw score out of 50, an approximate percentile band, a per-category breakdown, and every question shown with your answer, the correct answer, and an explanation.
 - **Best-score tracking** per test (saved in your browser's local storage).
@@ -47,9 +48,10 @@ python -m http.server 8000
 ```
 index.html        App shell and screens (home / test / results)
 css/styles.css    All styling
-js/questions.js   Verbal + Math & Logic question bank (with explanations)
-js/spatial.js     Spatial questions, generated as SVG (correct by construction)
-js/app.js         Quiz engine: session building, timer, scoring, review
+js/questions.js   Hand-written Verbal + Math & Logic questions (with explanations)
+js/spatial.js     Spatial questions incl. 3×3 matrices, generated as SVG (correct by construction)
+js/generated.js   Number/letter series, error-checking & templated arithmetic (correct by construction)
+js/app.js         Quiz engine: session building, difficulty ramp, timer, scoring, review
 ```
 
 ## Notes

@@ -369,5 +369,100 @@
       explanation: "B is north of C, and A is north of B, so A is the farthest north." }
   ];
 
+  /* ---------------- HARDER ITEMS (difficulty 3) ---------------- */
+  const HARD = [
+    // Hard synonyms
+    { id: "v-syn-h1", category: V, type: "Synonym", difficulty: 3,
+      stem: "Select the word most <strong>similar</strong> in meaning to:<br><strong>EPHEMERAL</strong>",
+      options: ["Eternal", "Fleeting", "Solid", "Joyful", "Massive"], answer: 1,
+      explanation: "“Ephemeral” means lasting a very short time — “fleeting.”" },
+    { id: "v-syn-h2", category: V, type: "Synonym", difficulty: 3,
+      stem: "Select the word most <strong>similar</strong> in meaning to:<br><strong>UBIQUITOUS</strong>",
+      options: ["Rare", "Widespread", "Hidden", "Unique", "Tiny"], answer: 1,
+      explanation: "“Ubiquitous” means present everywhere — “widespread.”" },
+    { id: "v-syn-h3", category: V, type: "Synonym", difficulty: 3,
+      stem: "Select the word most <strong>similar</strong> in meaning to:<br><strong>GARRULOUS</strong>",
+      options: ["Silent", "Talkative", "Angry", "Lazy", "Generous"], answer: 1,
+      explanation: "“Garrulous” means excessively talkative." },
+    { id: "v-syn-h4", category: V, type: "Synonym", difficulty: 3,
+      stem: "Select the word most <strong>similar</strong> in meaning to:<br><strong>AMELIORATE</strong>",
+      options: ["Worsen", "Improve", "Ignore", "Confuse", "Delay"], answer: 1,
+      explanation: "“Ameliorate” means to make better — “improve.”" },
+    { id: "v-syn-h5", category: V, type: "Synonym", difficulty: 3,
+      stem: "Select the word most <strong>similar</strong> in meaning to:<br><strong>INSIPID</strong>",
+      options: ["Spicy", "Bland", "Bright", "Loud", "Sharp"], answer: 1,
+      explanation: "“Insipid” means lacking flavour or interest — “bland.”" },
+    // Hard antonyms
+    { id: "v-ant-h1", category: V, type: "Antonym", difficulty: 3,
+      stem: "Select the word most <strong>opposite</strong> in meaning to:<br><strong>CANDID</strong>",
+      options: ["Frank", "Evasive", "Honest", "Open", "Direct"], answer: 1,
+      explanation: "“Candid” means open and honest; “evasive” means avoiding the truth." },
+    { id: "v-ant-h2", category: V, type: "Antonym", difficulty: 3,
+      stem: "Select the word most <strong>opposite</strong> in meaning to:<br><strong>AUSTERE</strong>",
+      options: ["Plain", "Lavish", "Strict", "Harsh", "Simple"], answer: 1,
+      explanation: "“Austere” means severe or plain; “lavish” means luxurious and abundant." },
+    { id: "v-ant-h3", category: V, type: "Antonym", difficulty: 3,
+      stem: "Select the word most <strong>opposite</strong> in meaning to:<br><strong>TRANSIENT</strong>",
+      options: ["Brief", "Permanent", "Fleeting", "Temporary", "Passing"], answer: 1,
+      explanation: "“Transient” means lasting only briefly; its opposite is “permanent.”" },
+    { id: "v-ant-h4", category: V, type: "Antonym", difficulty: 3,
+      stem: "Select the word most <strong>opposite</strong> in meaning to:<br><strong>MITIGATE</strong>",
+      options: ["Ease", "Aggravate", "Lessen", "Soften", "Reduce"], answer: 1,
+      explanation: "“Mitigate” means to make less severe; “aggravate” means to make worse." },
+    // Hard analogies
+    { id: "v-ana-h1", category: V, type: "Analogy", difficulty: 3,
+      stem: "<strong>Cartographer</strong> is to <strong>Maps</strong> as <strong>Choreographer</strong> is to ___",
+      options: ["Songs", "Dances", "Plays", "Maps", "Poems"], answer: 1,
+      explanation: "A cartographer creates maps; a choreographer creates dances." },
+    { id: "v-ana-h2", category: V, type: "Analogy", difficulty: 3,
+      stem: "<strong>Drought</strong> is to <strong>Water</strong> as <strong>Famine</strong> is to ___",
+      options: ["Rain", "Food", "Land", "Heat", "Money"], answer: 1,
+      explanation: "A drought is a shortage of water; a famine is a shortage of food." },
+    { id: "v-ana-h3", category: V, type: "Analogy", difficulty: 3,
+      stem: "<strong>Whisper</strong> is to <strong>Shout</strong> as <strong>Trickle</strong> is to ___",
+      options: ["Drip", "Flood", "Leak", "Splash", "Drop"], answer: 1,
+      explanation: "A whisper is a faint version of a shout; a trickle is a faint version of a flood." },
+    // Hard sentence completion
+    { id: "v-sen-h1", category: V, type: "Sentence Completion", difficulty: 3,
+      stem: "Choose the word that best completes the sentence:<br>“The senator's ___ remarks, though eloquent, ultimately revealed nothing of her actual position.”",
+      options: ["candid", "evasive", "blunt", "honest", "decisive"], answer: 1,
+      explanation: "Revealing nothing of her position means the remarks were “evasive,” despite being eloquent." },
+    { id: "v-sen-h2", category: V, type: "Sentence Completion", difficulty: 3,
+      stem: "Choose the word that best completes the sentence:<br>“Far from being ___, the critic's review was a scathing dismissal of the entire production.”",
+      options: ["harsh", "laudatory", "negative", "cruel", "brief"], answer: 1,
+      explanation: "“Far from being ___” signals a contrast with “scathing,” so the missing word means praising — “laudatory.”" },
+    // Hard odd-one-out (concept grouping)
+    { id: "v-odd-h1", category: V, type: "Odd One Out", difficulty: 2,
+      stem: "Which word does <strong>not</strong> belong with the others?",
+      options: ["Brisk", "Swift", "Rapid", "Sluggish", "Quick"], answer: 3,
+      explanation: "Brisk, swift, rapid and quick all mean fast; “sluggish” means slow." },
+    { id: "v-odd-h2", category: V, type: "Odd One Out", difficulty: 2,
+      stem: "Which word does <strong>not</strong> belong with the others?",
+      options: ["Joy", "Grief", "Sorrow", "Misery", "Despair"], answer: 0,
+      explanation: "Grief, sorrow, misery and despair all relate to sadness; “joy” does not." },
+    // Hard logic / syllogisms
+    { id: "m-log-h1", category: M, type: "Logical Reasoning", difficulty: 3,
+      stem: "All gleeks are florns. No florns are dops. Therefore:",
+      options: ["All gleeks are dops.", "No gleeks are dops.", "Some dops are gleeks.", "All dops are florns.", "Cannot be determined."], answer: 1,
+      explanation: "Every gleek is a florn, and no florn is a dop, so no gleek can be a dop." },
+    { id: "m-log-h2", category: M, type: "Logical Reasoning", difficulty: 3,
+      stem: "In a race of five runners: C beat D, A beat C, E beat A, and B beat E. Who finished <strong>first</strong>?",
+      options: ["A", "B", "C", "D", "E"], answer: 1,
+      explanation: "The order is B > E > A > C > D, so B finished first." },
+    { id: "m-log-h3", category: M, type: "Logical Reasoning", difficulty: 3,
+      stem: "Some artists are teachers. All teachers are employed. Which statement <strong>must</strong> be true?",
+      options: ["All artists are employed.", "Some artists are employed.", "All employed people are teachers.", "No artists are employed.", "Some teachers are not employed."], answer: 1,
+      explanation: "The artists who are teachers must be employed, so some artists are employed." }
+  ];
+  HARD.forEach((q) => BANK.push(q));
+
+  // Default difficulty by type for any item not explicitly tagged.
+  const DIFF_BY_TYPE = {
+    "Synonym": 1, "Antonym": 1, "Analogy": 2, "Sentence Completion": 2, "Odd One Out": 1,
+    "Word Problem": 2, "Percentages": 1, "Ratios": 2, "Algebra": 2, "Geometry": 1,
+    "Averages": 1, "Fractions": 1, "Number Series": 2, "Logical Reasoning": 2, "Logic Puzzle": 3
+  };
+  BANK.forEach((q) => { if (q.difficulty == null) q.difficulty = DIFF_BY_TYPE[q.type] || 2; });
+
   window.QUESTION_BANK = BANK;
 })();
