@@ -1,0 +1,14 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node (not used, but ignored just in case)
+node_modules/
