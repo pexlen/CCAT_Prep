@@ -12,3 +12,12 @@ npm-debug.log*
 
 # Node (not used, but ignored just in case)
 node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# transient long-run logs (keep CSV/txt result artifacts)
+results/*_n8.log
